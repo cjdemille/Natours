@@ -98,6 +98,7 @@
     &__icon {
         position: relative;
         margin-top: 3.5rem;
+        transition: all .4s;
 
         &,
         &::before,
@@ -117,12 +118,12 @@
 
         &::before {
             top: -.8rem;
-            transition: top .2s;
+            transition: all .2s;
         }
 
         &::after {
             top: .8rem;
-            transition: top .2s;
+            transition: all.2s;
         }
     }
 
@@ -132,5 +133,21 @@
 
     &__button:hover &__icon::after {
         top: 1rem;
+    }
+
+    &__checkbox:checked~&__button &__icon {
+        background-color: transparent;
+
+    }
+
+    &__checkbox:checked~&__button &__icon::before {
+        transform: rotate(135deg);
+        top: 0;
+
+    }
+
+    &__checkbox:checked~&__button &__icon::after {
+        transform: rotate(-135deg);
+        top: 0;
     }
 }
