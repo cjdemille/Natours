@@ -1,11 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<!-- TODO: 
-
-Art Direction & Density Switching for the stories and popup images -->
-<!-- build JS to close menu 
-build JS to close popup -->
+<!-- TODO:  -->
+<!-- build JS to close menu -->
+<!-- build JS to close popup -->
 
 <head>
     <meta charset="UTF-8">
@@ -29,11 +27,11 @@ build JS to close popup -->
         <div class="navigation__background">&nbsp;</div>
         <nav class="navigation__nav">
             <ul class="navigation__list">
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>01</span>About Natours</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>02</span>Your benefits</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>03</span>Popular tours</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>04</span>Stories</a></li>
-                <li class="navigation__item"><a href="#" class="navigation__link"><span>05</span>Book Now</a></li>
+                <li class="navigation__item"><a href="#section-about" class="navigation__link"><span>01</span>About Natours</a></li>
+                <li class="navigation__item"><a href="#section-features" class="navigation__link"><span>02</span>Your benefits</a></li>
+                <li class="navigation__item"><a href="#section-tours" class="navigation__link"><span>03</span>Popular tours</a></li>
+                <li class="navigation__item"><a href="#section-stories" class="navigation__link"><span>04</span>Stories</a></li>
+                <li class="navigation__item"><a href="#section-book" class="navigation__link"><span>05</span>Book Now</a></li>
             </ul>
         </nav>
     </div>
@@ -51,7 +49,7 @@ build JS to close popup -->
     </header>
 
     <main>
-        <section class="section-about">
+        <section class="section-about" id="section-about">
             <div class="u-margin-bottom-big u-center-text">
                 <h2 class="heading-secondary">Exciting tours for adventurous people</h2>
             </div>
@@ -90,7 +88,7 @@ build JS to close popup -->
         </section>
 
 
-        <section class="section-features">
+        <section class="section-features" id="section-features">
             <div class="row">
                 <div class="col-1-of-4">
                     <div class="feature-box">
@@ -245,7 +243,7 @@ build JS to close popup -->
         </section>
 
 
-        <section class="section-stories">
+        <section class="section-stories" id="section-stories">
             <div class="bg-video">
                 <video class="bg-video__content" autoplay muted loop>
                     <source src="img/video.mp4" type="video/mp4">
@@ -259,7 +257,10 @@ build JS to close popup -->
             <div class="row">
                 <div class="story">
                     <figure class="story__shape">
-                        <img src="img/nat-8.jpg" alt="Person on a tour" class="story__img">
+                        <img srcset="img/nat-8-small.jpeg 300w, img/nat-8.jpg 2000w"
+                            sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30 , 300px"
+                            alt="Person on a tour"
+                            class="story__img" src="img/nat-8.jpg">
                         <figcaption class="story__caption">Mary Smith</figcaption>
                     </figure>
                     <div class="story__text">
@@ -274,7 +275,10 @@ build JS to close popup -->
             <div class="row">
                 <div class="story">
                     <figure class="story__shape">
-                        <img src="img/nat-9.jpg" alt="Person on a tour" class="story__img">
+                        <img srcset="img/nat-9-small.jpeg 300w, img/nat-9.jpg 2000w"
+                            sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30 , 300px"
+                            alt="Person on a tour"
+                            class="story__img" src="img/nat-9.jpg">
                         <figcaption class="story__caption">Jack wilson</figcaption>
                     </figure>
                     <div class="story__text">
@@ -291,7 +295,7 @@ build JS to close popup -->
             </div>
         </section>
 
-        <section class="section-book">
+        <section class="section-book" id="section-book">
             <div class="row">
                 <div class="book">
                     <div class="book__form">
@@ -370,8 +374,14 @@ build JS to close popup -->
         <div class="row">
             <div class="popup__content">
                 <div class="popup__left">
-                    <img src="img/nat-8.jpg" alt="Tour photo" class="popup__img">
-                    <img src="img/nat-9.jpg" alt="Tour photo" class="popup__img">
+                    <img srcset="img/nat-8-small.jpeg 300w, img/nat-8.jpg 2000w"
+                    sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30 , 300px"
+                    alt="Person on a tour"
+                    class="popup__img" src="img/nat-8.jpg">
+                    <img srcset="img/nat-9-small.jpeg 300w, img/nat-9.jpg 2000w"
+                    sizes="(max-width:56.25em) 20vw, (max-width:37.5em) 30 , 300px"
+                    alt="Person on a tour"
+                    class="popup__img" src="img/nat-9.jpg">
                 </div>
                 <div class="popup__right">
                     <a href="#section-tours" class="popup__close">&times;</a>
